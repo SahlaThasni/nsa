@@ -1,0 +1,14 @@
+hour=`date +%H`
+ur -lt 12
+if [ $hour -lt  12 ]
+then
+echo "good morning"
+elif [ $hour -le  16 ]
+then
+echo "good afternoon world "
+elif [ $hour -le 20 ]
+then
+echo "good evening world"
+else
+echo "good night world"
+fi
