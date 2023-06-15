@@ -1,23 +1,18 @@
-echo "enter the starting range:"
-read i
-echo "enter the ending range:"
+
+echo "Enter a Number:"
 read n
-while((i<=n))
+q=$n;
+sum=0;
+while [ $q -gt 0 ]
 do
-c=$i
-d=$i
-b=0
-a=0
-while((c>0))
-do
-a=$((c%10))
-b=$((b + a*a*a))
-c=$((c/10))
+r=$(( q % 10 ))
+q=$(( q / 10 ))
+a=$(((r * r)*r))
+sum=$(( sum + a))
 done
-echo "The armstrong number:"
-if((b==d));
- then
-echo $i
+if [ $sum -eq $n ]
+then
+echo "Number is Armstrong"
+else
+echo "Number is not armstrong"
 fi
-i=$((i+1))
-done
