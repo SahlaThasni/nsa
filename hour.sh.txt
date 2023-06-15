@@ -1,5 +1,4 @@
 hour=`date +%H`
-ur -lt 12
 if [ $hour -lt  12 ]
 then
 echo "good morning"
